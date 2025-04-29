@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header';
 import PokemonList from './components/PokemonList';
 import { PokemonProvider } from './context/PokemonContext';
