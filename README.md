@@ -1,54 +1,86 @@
-# React + TypeScript + Vite
+# Pokemon Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application that allows users to explore and search through the first 150 Pokemon using the PokeAPI. Built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+[![Pokemon Explorer Screenshot](https://images.pexels.com/photos/1310847/pexels-photo-1310847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)](https://poke-dex-five-phi.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📱 Fully responsive design that works on all devices
+- 🔍 Real-time search functionality
+- 🏷️ Filter Pokemon by type
+- 🎨 Beautiful card-based layout with type-specific colors
+- ⚡ Fast and efficient with React context for state management
+- 🔄 Loading states and error handling
+- 🖼️ High-quality Pokemon artwork
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech Stack
+
+- React 18
+- TypeScript
+- Tailwind CSS
+- Vite
+- Lucide React (for icons)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 16.0 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Omianju/pokemon-explorer.git
+   cd pokemon-explorer
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and visit `http://localhost:5173`
+
+## Project Structure
+
+```
+src/
+├── components/         # React components
+├── context/           # React context for state management
+├── icons/             # Custom SVG icons
+├── types/             # TypeScript type definitions
+├── utils/             # Utility functions
+├── App.tsx            # Main application component
+└── main.tsx          # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## API Reference
+
+This project uses the [PokeAPI](https://pokeapi.co/) to fetch Pokemon data. The following endpoints are used:
+
+- `https://pokeapi.co/api/v2/pokemon?limit=150` - Fetch first 150 Pokemon
+- `https://pokeapi.co/api/v2/pokemon/{id}` - Fetch detailed Pokemon information
+
+
+
+## Acknowledgments
+
+- [PokeAPI](https://pokeapi.co/) for providing the Pokemon data
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [Lucide React](https://lucide.dev/) for the beautiful icons
