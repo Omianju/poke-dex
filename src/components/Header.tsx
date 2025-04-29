@@ -1,8 +1,7 @@
-import React from 'react';
-import { Search } from './Search';
-import { TypeFilter } from './TypeFilter';
 import { usePokemons } from '../context/PokemonContext';
 import { Pokeball } from '../icons/Pokeball';
+import { Search } from './Search';
+import { TypeFilter } from './TypeFilter';
 
 const Header = () => {
   const { isLoading } = usePokemons();
